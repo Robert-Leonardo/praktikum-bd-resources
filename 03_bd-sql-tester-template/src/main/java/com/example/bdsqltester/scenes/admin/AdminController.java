@@ -286,5 +286,56 @@ public class AdminController {
         }
     } // End of onTestButtonClick method
 
+    @FXML
+    void onDeleteAssignmentClick(ActionEvent event) {
+        if (idField.getText().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("No Assignment Selected");
+            alert.setContentText("Please select an assignment to delete.");
+            alert.showAndWait();
+            return;
+        }
+
+        long assignmentId = Long.parseLong(idField.getText());
+
+        Alert confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmationAlert.setTitle("Confirm Deletion");
+        confirmationAlert.setHeaderText("Are you sure you want to delete this assignment?");
+        confirmationAlert.setContentText("This action cannot be undone.");
+        confirmationAlert.showAndWait().ifPresent(response -> {
+                    if (response == ButtonType.OK) {
+                        try (Connection conn = MainDataSource.getConnection()) {
+                            String deleteQuery = "DELETE FROM assignments WHERE id = ?";
+                            PreparedStatement stmt = conn.prepareStatement(deleteQuery);
+                            stmt.setLong(1, assignmentId);
+                            stmt.executeUpdate();
+
+                            refreshAssignmentList();
+
+                            idField.clear();
+                            nameField.clear();
+                            instructionsField.clear();
+                            answerKeyField.clear();
+
+                            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+                            successAlert.setTitle("Success");
+                            successAlert.setHeaderText("Assignment Deleted");
+                            successAlert.setContentText("The assignment has been successfully deleted.");
+                            successAlert.showAndWait();
+
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                            errorAlert.setTitle("Database Error");
+                            errorAlert.setHeaderText("Failed to delete assignment");
+                            errorAlert.setContentText(e.getMessage());
+                            errorAlert.showAndWait();
+                        }
+                    }
+                }
+        );
+    }
+
 
 }
