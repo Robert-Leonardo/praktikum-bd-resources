@@ -18,6 +18,11 @@
       <VBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
          <children>
             <Button mnemonicParsing="false" onAction="#onNewAssignmentClick" style="-fx-background-color: Green;" text="New Assignment" textFill="#e1ff00" />
+            <Button mnemonicParsing="false" onAction="#onDeleteAssignmentClick" style="-fx-background-color: Black;" text="Delete Assignment" textFill="#00ff2e">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
             <ListView fx:id="assignmentList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <VBox.margin>
                   <Insets top="8.0" />
