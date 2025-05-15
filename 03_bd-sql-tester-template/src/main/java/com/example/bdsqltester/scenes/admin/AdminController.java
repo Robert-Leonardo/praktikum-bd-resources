@@ -376,8 +376,12 @@ public class AdminController {
         confirmationAlert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
                         try (Connection conn = MainDataSource.getConnection()) {
-                            String deleteQuery = "DELETE FROM assignments WHERE id = ?";
-                            PreparedStatement stmt = conn.prepareStatement(deleteQuery);
+                            String deleteAssignment = "DELETE FROM assignments WHERE id = ?";
+                            String deleteGrade = "DELETE FROM grades WHERE assignment_id = ?";
+                            PreparedStatement stmt = conn.prepareStatement(deleteAssignment);
+                            PreparedStatement statement = conn.prepareStatement(deleteGrade);
+                            statement.setLong(1,assignmentId);
+                            statement.executeUpdate();
                             stmt.setLong(1, assignmentId);
                             stmt.executeUpdate();
 

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00e030ff-d420-4e84-ba0b-4ecefd546efd" name="Changes" comment="Login title update">
+    <list default="true" id="00e030ff-d420-4e84-ba0b-4ecefd546efd" name="Changes" comment="show grade update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_bd-sql-tester-template/src/main/java/com/example/bdsqltester/scenes/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/03_bd-sql-tester-template/src/main/java/com/example/bdsqltester/scenes/admin/AdminController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747314311453</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="show grade update">
+      <option name="closed" value="true" />
+      <created>1747316267586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747316267586</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -122,6 +131,7 @@
     <MESSAGE value="Delete Assignment" />
     <MESSAGE value="Delete Assignment update" />
     <MESSAGE value="Login title update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login title update" />
+    <MESSAGE value="show grade update" />
+    <option name="LAST_COMMIT_MESSAGE" value="show grade update" />
   </component>
 </project>
