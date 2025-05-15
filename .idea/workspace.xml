@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00e030ff-d420-4e84-ba0b-4ecefd546efd" name="Changes" comment="Delete Assignment">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="00e030ff-d420-4e84-ba0b-4ecefd546efd" name="Changes" comment="Delete Assignment update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,13 +95,22 @@
       <option name="project" value="LOCAL" />
       <updated>1747313811880</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Delete Assignment update">
+      <option name="closed" value="true" />
+      <created>1747314068292</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747314068292</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="perubahan" />
     <MESSAGE value="New color" />
     <MESSAGE value="Delete Assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Assignment" />
+    <MESSAGE value="Delete Assignment update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Assignment update" />
   </component>
 </project>
